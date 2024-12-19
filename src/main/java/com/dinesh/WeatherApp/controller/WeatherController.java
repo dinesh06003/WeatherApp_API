@@ -13,7 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://weatherapp-sdr.netlify.app/")
 public class WeatherController {
     @Autowired
     private WeatherService weatherService;
