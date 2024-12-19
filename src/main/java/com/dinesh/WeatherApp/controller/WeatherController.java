@@ -18,6 +18,12 @@ public class WeatherController {
     @Autowired
     private WeatherService weatherService;
 
+
+    @GetMapping("/hello")
+    public String greeting(){
+        return "hello";
+    }
+
     @GetMapping("/api/weather")
     public ResponseEntity<Map<String, Object>> getWeather(@RequestParam String city, @RequestParam(defaultValue = "imperial") String unit){
     return   weatherService.getWeather(city, unit);
